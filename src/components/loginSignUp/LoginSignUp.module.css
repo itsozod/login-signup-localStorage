@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+.input_container {
+  margin: 10px;
+  padding: 10px;
+}
+.signUp_input {
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background-color: aquamarine;
+}
+.sign_btn {
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
