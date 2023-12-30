@@ -5,6 +5,7 @@ import { useRef, useState, useEffect } from "react";
 const LoginSignUp = () => {
   const [home, setHome] = useState(false);
   const [loginPage, setLoginPage] = useState(false);
+  const [logged, setLogged] = useState(false);
   const name = useRef();
   const email = useRef();
   const password = useRef();
@@ -51,10 +52,20 @@ const LoginSignUp = () => {
       alert("Incorrect email or password!");
     } else {
       setHome(true);
+      setLogged(true);
+    }
+  };
+
+  const handleClickMe = () => {
+    if (!logged) {
+      alert("You can't click me yet!!!");
+    } else {
+      alert("Good job");
     }
   };
   return (
     <>
+      <button onClick={() => handleClickMe()}>Click me!!!</button>
       {home ? (
         <Home />
       ) : loginPage ? (
